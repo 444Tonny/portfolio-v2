@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tonny — Web Developer & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="classic" class="loading">
+  <!-- Loader 3D (min 2s) -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-bg"></div>
+    <div class="loader-cube-wrap">
+      <div class="loader-cube">
+        <div class="loader-face loader-face-front"></div>
+        <div class="loader-face loader-face-back"></div>
+        <div class="loader-face loader-face-right"></div>
+        <div class="loader-face loader-face-left"></div>
+        <div class="loader-face loader-face-top"></div>
+        <div class="loader-face loader-face-bottom"></div>
+      </div>
+    </div>
+    <p class="loader-text">Chargement</p>
+  </div>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Theme picker fixe à droite, vertical -->
+  <nav class="theme-picker" role="group" aria-label="Choisir le style du site">
+    <span class="theme-picker-label">Style</span>
+    <button type="button" class="theme-btn active" data-theme="classic" aria-pressed="true">Classic</button>
+    <button type="button" class="theme-btn" data-theme="neobrutalist" aria-pressed="false">Neo-Brutaliste</button>
+    <button type="button" class="theme-btn" data-theme="retro" aria-pressed="false">Retro</button>
+    <button type="button" class="theme-btn" data-theme="futurism" aria-pressed="false">Futurisme</button>
+    <button type="button" class="theme-btn" data-theme="maximalism" aria-pressed="false">Maximalisme</button>
+    <button type="button" class="theme-btn" data-theme="glassmorphism" aria-pressed="false">Glass</button>
+    <button type="button" class="theme-btn" data-theme="organic" aria-pressed="false">Organic</button>
+    <button type="button" class="theme-btn" data-theme="magazine" aria-pressed="false">Magazine</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1 : HERO + PHOTO + NOM + TITRE                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-shapes" aria-hidden="true">
+      <div class="shape shape-hero-1"></div>
+      <div class="shape shape-hero-2"></div>
+      <div class="shape shape-hero-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <img src="assets/tonny.png" alt="Tonny Andriambololona" class="hero-photo" width="320" height="320">
+      </div>
+      <div class="hero-text">
+        <p class="hero-badge">Web Developer & Designer</p>
+        <h1 class="hero-name">Tonny</h1>
+        <p class="hero-tagline">Let's build awesome websites, apps and games together!</p>
+        <div class="hero-socials" aria-label="Réseaux sociaux">
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="mailto:tonny.freelancing@gmail.com" class="social-icon" title="Gmail" aria-label="Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.883l8.073-6.39C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+        </div>
+        <a href="#contact" class="btn-cta">Me contacter</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2 : TÉMOIGNAGES                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section testimonials reveal" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="section-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-t-1"></div>
+      <div class="shape shape-section shape-t-2"></div>
+    </div>
+    <div class="container">
+      <h2 id="testimonials-heading" class="section-title">Témoignages</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card reveal reveal-delay-1">
+          <p>Je traite votre projet comme le mien. Je m’engage toujours à livrer un travail de qualité et à respecter les délais convenus.</p>
+        </blockquote>
+        <blockquote class="testimonial-card reveal reveal-delay-2">
+          <p>En travaillant sur plusieurs plateformes de freelancing, je donne toujours le meilleur pour maintenir un <strong>taux de réussite de 100%</strong>. Principalement actif sur Upwork, vous pouvez consulter les retours de mes clients sur mon <a href="https://www.upwork.com/freelancers/~01b34b1f0e8e8e8e8e" target="_blank" rel="noopener">profil Upwork</a>.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3 : SKILLS (3 catégories)                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section skills reveal" id="skills" aria-labelledby="skills-heading">
+    <div class="section-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-s-1"></div>
+      <div class="shape shape-section shape-s-2"></div>
+      <div class="shape shape-section shape-s-3"></div>
+    </div>
+    <div class="container">
+      <h2 id="skills-heading" class="section-title">Compétences</h2>
+      <div class="skills-grid">
+        <article class="skill-card reveal reveal-delay-1" data-skill="wordpress">
+          <div class="skill-icon-wrap">
+            <span class="skill-icon" aria-hidden="true">W</span>
+          </div>
+          <h3 class="skill-title">WordPress</h3>
+          <ul class="skill-tags">
+            <li>Elementor</li>
+            <li>Divi</li>
+            <li>SEO</li>
+            <li>MySQL</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal reveal-delay-2" data-skill="fullstack">
+          <div class="skill-icon-wrap">
+            <span class="skill-icon" aria-hidden="true">{}</span>
+          </div>
+          <h3 class="skill-title">Développement full stack</h3>
+          <ul class="skill-tags">
+            <li>Vue</li>
+            <li>Laravel</li>
+            <li>React</li>
+            <li>CSS</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal reveal-delay-3" data-skill="others">
+          <div class="skill-icon-wrap">
+            <span class="skill-icon" aria-hidden="true">◇</span>
+          </div>
+          <h3 class="skill-title">Autres</h3>
+          <ul class="skill-tags">
+            <li>VS Code</li>
+            <li>Cursor</li>
+            <li>Claude</li>
+            <li>Photoshop</li>
+            <li>Figma</li>
+            <li>Linux</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4 : 3 PROJETS DÉTAILLÉS (aperçu, nom, rôle, desc, bouton) -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section featured-projects reveal" id="featured-projects" aria-labelledby="featured-heading">
+    <div class="section-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-f-1"></div>
+      <div class="shape shape-section shape-f-2"></div>
+    </div>
+    <div class="container">
+      <h2 id="featured-heading" class="section-title">Projets à la une</h2>
+      <div class="featured-grid">
+        <article class="featured-card reveal reveal-delay-1">
+          <div class="featured-image-wrap">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="" class="featured-image" loading="lazy">
+          </div>
+          <div class="featured-body">
+            <h3 class="featured-name">Mini-Golf Interactive Score Tracker</h3>
+            <p class="featured-role">Développement full stack, design & admin</p>
+            <p class="featured-desc">Application web mobile et desktop qui calcule les scores des joueurs en temps réel, avec panneau d’administration pour les statistiques et la gestion des parties. Laravel, MySQL, JavaScript, CSS3, HTML5.</p>
+            <a href="#" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+          </div>
+        </article>
+        <article class="featured-card reveal reveal-delay-2">
+          <div class="featured-image-wrap">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" alt="" class="featured-image" loading="lazy">
+          </div>
+          <div class="featured-body">
+            <h3 class="featured-name">Daily Quiz Game Application</h3>
+            <p class="featured-role">Backend, scoring & admin</p>
+            <p class="featured-desc">Jeu de quiz quotidien avec système de scoring intelligent basé sur les réponses des autres joueurs, et panneau admin pour planifier les parties et suivre les stats. Laravel, MySQL, JavaScript, Google Sheets API.</p>
+            <a href="#" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+          </div>
+        </article>
+        <article class="featured-card reveal reveal-delay-3">
+          <div class="featured-image-wrap">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="" class="featured-image" loading="lazy">
+          </div>
+          <div class="featured-body">
+            <h3 class="featured-name">Daily Guessing Game (Sports)</h3>
+            <p class="featured-role">Full stack, admin & contenu</p>
+            <p class="featured-desc">Application de trivia sportive où les joueurs devinent un athlète mystère NBA, MLB ou NFL en un minimum de tentatives. Mise à jour quotidienne, dashboard admin pour le contenu et les statistiques. Laravel, MySQL, JavaScript, CSS3, HTML5.</p>
+            <a href="#" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5 : AUTRES PROJETS (liste: image, tech, rôle, bouton) -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section other-projects reveal" id="other-projects" aria-labelledby="other-heading">
+    <div class="section-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-o-1"></div>
+      <div class="shape shape-section shape-o-2"></div>
+    </div>
+    <div class="container">
+      <h2 id="other-heading" class="section-title">Autres projets</h2>
+      <div class="other-grid">
+        <article class="other-card">
+          <div class="other-image-wrap">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80" alt="" class="other-image" loading="lazy">
+          </div>
+          <p class="other-tech">Elementor, JupiterX, WooCommerce</p>
+          <p class="other-role">Refonte complète (technique & contenu), SEO</p>
+          <a href="#" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+        </article>
+        <article class="other-card">
+          <div class="other-image-wrap">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="" class="other-image" loading="lazy">
+          </div>
+          <p class="other-tech">Divi, ACF, Polylang</p>
+          <p class="other-role">Développement & intégration, SEO</p>
+          <a href="#" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+        </article>
+        <article class="other-card">
+          <div class="other-image-wrap">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="" class="other-image" loading="lazy">
+          </div>
+          <p class="other-tech">Elementor, JupiterX, EventON</p>
+          <p class="other-role">Intégration web, SEO, personnalisation design</p>
+          <a href="#" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+        </article>
+        <article class="other-card">
+          <div class="other-image-wrap">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="" class="other-image" loading="lazy">
+          </div>
+          <p class="other-tech">Elementor, WooCommerce, Amelia, Canva</p>
+          <p class="other-role">Intégration de pages, création de templates</p>
+          <a href="#" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6 : CONTACT (design original)                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="section contact reveal" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-bg"></div>
+    <div class="section-shapes contact-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-c-1"></div>
+      <div class="shape shape-section shape-c-2"></div>
+      <div class="shape shape-section shape-c-3"></div>
+    </div>
+    <div class="container">
+      <h2 id="contact-heading" class="section-title contact-title">Restons en contact</h2>
+      <p class="contact-intro">Intéressé par mes services ou besoin d’infos ? Écrivez-moi.</p>
+      <div class="contact-socials" aria-label="Réseaux sociaux">
+        <a href="https://github.com" target="_blank" rel="noopener" class="contact-social-icon" title="GitHub" aria-label="GitHub">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-social-icon" title="LinkedIn" aria-label="LinkedIn">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="contact-social-icon" title="WhatsApp" aria-label="WhatsApp">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="mailto:tonny.freelancing@gmail.com" class="contact-social-icon" title="Gmail" aria-label="Email">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.883l8.073-6.39C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:tonny.freelancing@gmail.com" class="contact-link contact-email">
+          <span class="contact-link-icon" aria-hidden="true">@</span>
+          <span>tonny.freelancing@gmail.com</span>
+        </a>
+        <a href="https://www.upwork.com" target="_blank" rel="noopener" class="contact-link contact-upwork">
+          <span class="contact-link-icon" aria-hidden="true">↑</span>
+          <span>Upwork</span>
+        </a>
+      </div>
+      <p class="contact-more">Envie d’en voir plus ? Découvrez mon <a href="#" target="_blank" rel="noopener">portfolio jeux</a>.</p>
+      <p class="contact-credits">Merci de votre visite :)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
