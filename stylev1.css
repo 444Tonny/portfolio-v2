@@ -1,0 +1,231 @@
+/* INTRO - */
+
+.intro
+{
+    min-height: 80vh;
+    background-color: #060812;
+    color: white;
+}
+
+.intro section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.line_intro
+{
+    width: 35%;
+    height: 4px;
+    display: flex;
+    background-image: url('../img/update/line_rounded.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.line_top
+{
+    margin-top: 10px;
+}
+
+.line_bottom
+{
+    transform: rotate(180deg);
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.intro .i_creative,
+.intro .i_efficient
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 750px;
+}
+
+.i_creative .creative_texts ,
+.i_efficient .creative_texts 
+{
+    width: 65%;
+}
+
+.i_efficient div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+}
+
+.i_shape {
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 30%,#0000 4%,57%,#660934 90%) #151230;
+    opacity: 0.3;
+}
+
+.intro .intro_section p
+{
+    font-family: 'Oxanium', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 400px;
+    min-width: 250px;
+    margin: 0;
+}
+
+.intro h3
+{
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+.i_efficient h3,
+.i_efficient p
+{
+    text-align: right;
+}
+
+.stroke
+{   
+    font-family: 'Paytona one', sans-serif;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0) !important;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.9);
+}
+
+.emphasis
+{
+    color: #FF0067;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #ff006656;
+}
+
+
+/* Do more */
+
+.i_domore
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.i_domore span
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    color: rgb(246, 246, 246);
+    height: 33px;
+}
+
+.i_domore span::after
+{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #00265a7a;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: 0px;
+}
+
+.i_domore h4
+{
+    font-family: 'paytona one', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0;
+    z-index: 4;
+}
+
+.i_domore h4.mirror_domore
+{
+    position: relative;
+    top: -45px;
+    margin-bottom: -25px;
+
+    font-family: 'paytona one', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+
+    color: rgba(0, 0, 0, 0) !important;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.9);
+}
+
+.i_domore p
+{
+    font-family: 'Oxanium', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 250px;
+    max-width: 500px;
+    margin: 0;
+    position: relative;
+    top: -18px;
+}
+
+/* Media intro */
+
+@media screen and (max-width: 768px) {
+
+    .intro h3 {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 15px;
+    }
+
+    .intro p
+    {
+        font-size: 13px !important;
+        line-height: 26px !important;
+    }
+
+    .emphasis
+    {
+        font-size: 15px;
+    }
+
+    .i_creative
+    {
+        margin-bottom: 70px !important;
+    }
+
+    .i_domore h4
+    {
+        font-size: 32px !important;
+    }
+
+    .i_shape {
+        width: 100px;
+        height: 100px;
+        opacity: 0.2;
+    }
+}  
