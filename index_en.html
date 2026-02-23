@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tonny - Web Developer & Designer</title>
-  <!-- Chargement des polices Google : Syne (titres), Space Grotesk (corps), JetBrains Mono (code),
-       Orbitron (futurisme), Playfair Display (magazine), Bebas Neue (brutalisme) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
@@ -14,21 +12,12 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stylev1.css">
 </head>
-<!-- data-theme : attribut lu par le CSS pour appliquer le bon thème visuel au chargement -->
-<!-- class="loading" : masque le contenu principal pendant que le loader 3D tourne -->
 <body data-theme="classic" class="loading">
 
-  <!-- ───────────────────────────────────────────────────────────
-       LOADER 3D
-       Affiché pendant au moins 2,2 s (géré dans script.js).
-       Composé d'un fond, d'un cube CSS 3D à 6 faces animées,
-       et d'un texte "Chargement". aria-hidden car purement décoratif.
-  ─────────────────────────────────────────────────────────────── -->
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-bg"></div>
     <div class="loader-cube-wrap">
       <div class="loader-cube">
-        <!-- Les 6 faces du cube CSS 3D -->
         <div class="loader-face loader-face-front"></div>
         <div class="loader-face loader-face-back"></div>
         <div class="loader-face loader-face-right"></div>
@@ -37,40 +26,31 @@
         <div class="loader-face loader-face-bottom"></div>
       </div>
     </div>
-    <p class="loader-text">Chargement</p>
+    <p class="loader-text">Loading</p>
   </div>
 
-  <!-- Overlay de bruit (grain) appliqué en position fixe sur toute la page, purement visuel -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- ───────────────────────────────────────────────────────────
-       SÉLECTEUR DE THÈME
-       Barre verticale fixe à droite de l'écran.
-       Chaque bouton porte un data-theme écouté par script.js.
-       aria-pressed indique l'état actif pour l'accessibilité.
-       La rotation automatique toutes les 4 s est gérée dans script.js.
-  ─────────────────────────────────────────────────────────────── -->
-  <nav class="theme-picker" role="group" aria-label="Choisir le style du site">
+  <nav class="theme-picker" role="group" aria-label="Choose site style">
     <span class="theme-picker-label">Style</span>
-    <button type="button" class="theme-btn active" data-theme="classic" aria-pressed="true">Classique</button>
-    <button type="button" class="theme-btn" data-theme="neobrutalist" aria-pressed="false">Néo-Brutaliste</button>
-    <button type="button" class="theme-btn" data-theme="glassmorphism" aria-pressed="false">Glassmorphisme</button>
-    <button type="button" class="theme-btn" data-theme="organic" aria-pressed="false">Organique</button>
-    <button type="button" class="theme-btn" data-theme="futurism" aria-pressed="false">Futuriste</button>
+    <button type="button" class="theme-btn active" data-theme="classic" aria-pressed="true">Classic</button>
+    <button type="button" class="theme-btn" data-theme="neobrutalist" aria-pressed="false">Neo-Brutalist</button>
     <button type="button" class="theme-btn" data-theme="retro" aria-pressed="false">Retro</button>
+    <button type="button" class="theme-btn" data-theme="futurism" aria-pressed="false">Futurism</button>
+    <button type="button" class="theme-btn" data-theme="glassmorphism" aria-pressed="false">Glass</button>
+    <button type="button" class="theme-btn" data-theme="organic" aria-pressed="false">Organic</button>
   </nav>
 
+  <!-- Language switcher — links back to FR version -->
   <div class="lang-switcher" id="langSwitcher">
-    <span class="lang-btn active">FR</span>
+    <a href="index.html" class="lang-btn">FR</a>
     <span class="lang-divider">|</span>
-    <a href="index_en.html" class="lang-btn">EN</a>
+    <span class="lang-btn active">EN</span>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 1 : HERO + PHOTO + NOM + TITRE                    -->
+  <!-- SECTION 1 : HERO                                           -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- hero-bg : fond décoratif (gradient/image) positionné en absolu -->
-  <!-- hero-shapes : formes géométriques animées, aria-hidden car décoratives -->
   <header class="hero" id="hero">
     <div class="hero-bg"></div>
     <div class="hero-shapes" aria-hidden="true">
@@ -79,26 +59,24 @@
       <div class="shape shape-hero-3"></div>
     </div>
     <div class="hero-content">
-      <!-- Photo de profil — width/height définis pour éviter le layout shift (CLS) -->
       <div class="hero-col1">
         <div class="hero-photo-wrap">
           <img src="assets/tonny.png" alt="Tonny Andriambololona" class="hero-photo" width="320" height="320">
         </div>
         <div class="hero-exp">
           <p>Experience</p>
-          <b>+6 années</b>
+          <b>+6 years</b>
         </div>
       </div>
       <div class="hero-text">
-        <p class="hero-badge">Design - Code - Automatise</p>
+        <p class="hero-badge">Design - Code - Automate</p>
         <h1 class="hero-name">Tonny</h1>
-        <p class="hero-tagline">Créons ensemble des sites, apps <br> et outils digitaux d’exception. </p>
+        <p class="hero-tagline">Let's build awesome websites, <br> apps and games together!</p>
 
-        <!-- Bouton d'appel à l'action — scroll smooth vers #contact via script.js -->
         <div class="hero-buttons">
-          <a href="#about-me" class="btn-cta">Explorer</a>
+          <a href="#contact" class="btn-cta">Explore</a>
           <a href="file/Tonny_Resume.pdf" download="Tonny_Resume" target="_blank">
-            <button class="btn-cv"> 
+            <button class="btn-cv">
                 <svg xmlns="http://www.w3.org/2000/svg" height="0.85em" viewBox="0 0 512 512">
                 <style>svg{fill:#ffffff}</style><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
                 <b>CV</b>
@@ -106,66 +84,56 @@
           </a>
         </div>
 
-        <!-- Liens vers les réseaux sociaux — icônes SVG inline pour performances et accessibilité -->
-        <div class="hero-socials" aria-label="Réseaux sociaux">
-          <!-- LinkedIn -->
-          <a href="https://ca.linkedin.com/in/tonny-444n" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+        <div class="hero-socials" aria-label="Social networks">
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
             <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <!-- Email — mailto ouvre directement le client mail de l'utilisateur -->
-          <a href="mailto:tonny.freelancing@gmail.com" class="social-icon" title="Gmail" aria-label="Email">
-            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.883l8.073-6.39C21.69 2.28 24 3.434 24 5.457z"/></svg>
-          </a>
-          <!-- WhatsApp — numéro à remplacer par le vrai numéro au format international -->
-          <a href="https://wa.me/14387226839" target="_blank" rel="noopener" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
             <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <!-- GitHub -->
-          <a href="https://github.com/444Tonny" target="_blank" rel="noopener" class="social-icon" title="GitHub" aria-label="GitHub">
-            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="mailto:tonny.freelancing@gmail.com" class="social-icon" title="Gmail" aria-label="Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.883l8.073-6.39C21.69 2.28 24 3.434 24 5.457z"/></svg>
           </a>
         </div>
       </div>
     </div>
-    <!-- Indicateur de scroll visuel, masqué des lecteurs d'écran 
-    <div class="scroll-hint" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-arrow"></div>
-    </div> -->
   </header>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 2 : Be                                    -->
+  <!-- SECTION 2 : BE                                             -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <div class="intro" id="about-me">
+  <div class="intro">
     <section>
       <div class="i_creative">
         <div class="creative_texts intro_section">
-            <h3><i class="stroke">ÊTRE</i> CRÉATIF</h3>
-            <p>Des expériences digitales <b class="emphasis">fortes</b>, pensées dans les moindres <b class="emphasis">détails</b>.</p>
+            <h3><i class="stroke">BE</i> CREATIVE</h3>
+            <p><b class="emphasis">Powerful</b> digital experiences, crafted down to the smallest <b class="emphasis">detail</b>.</p>
         </div>
         <div class="i_shape i_shape1"></div>
       </div>
-  
+
       <div class="i_efficient">
         <div class="i_shape i_shape2"></div>
         <div class="creative_texts intro_section">
-            <h3>ÊTRE <i class="stroke">EFFICACE</i></h3>
-            <p>L’<b class="emphasis">essentiel</b>, sans perte de temps. Des solutions précises et <b class="emphasis">performantes</b>.</p>
+            <h3>BE <i class="stroke">EFFICIENT</i></h3>
+            <p>The <b class="emphasis">essential</b>, nothing more. Precise and <b class="emphasis">high-performance</b> solutions.</p>
         </div>
       </div>
-  
+
       <div class="i_domore">
         <span class="wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">&</span>
-        <h4 class="wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">FAIRE PLUS</h4>
-        <h4 class="mirror_domore wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">FAIRE PLUS</h4>
-        <p>Ne pas viser la moyenne, viser l'excellence.</p>
+        <h4 class="wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">ALWAYS MORE</h4>
+        <h4 class="mirror_domore wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">ALWAYS MORE</h4>
+        <p>Don't aim for average. Aim for excellence.</p>
       </div>
-    </section>  
+    </section>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 3 : SKILLS (3 catégories)                          -->
+  <!-- SECTION 3 : SKILLS                                         -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="section skills reveal" id="skills" aria-labelledby="skills-heading">
     <div class="section-shapes" aria-hidden="true">
@@ -174,17 +142,13 @@
       <div class="shape shape-section shape-s-3"></div>
     </div>
     <div class="container">
-      <h2 id="skills-heading" class="section-title">Expertises</h2>
-      <!-- skills-grid : grille CSS à 3 colonnes responsives -->
+      <h2 id="skills-heading" class="section-title">Expertise</h2>
       <div class="skills-grid">
-        <!-- data-skill : utilisable en CSS ou JS pour cibler une carte spécifique (ex. icône thématique) -->
         <article class="skill-card reveal reveal-delay-1" data-skill="wordpress">
           <div class="skill-icon-wrap">
-            <!-- Icône textuelle simple (lettre ou symbole) pour rester léger et stylistiquement flexible -->
             <span class="skill-icon" aria-hidden="true">W</span>
           </div>
           <h3 class="skill-title">WordPress</h3>
-          <!-- skill-tags : liste de technologies/outils associés à la compétence -->
           <ul class="skill-tags">
             <li>Elementor</li>
             <li>Gutenberg</li>
@@ -196,7 +160,7 @@
             <li>CSS</li>
             <li>SEO</li>
             <li>AEO</li>
-            <li>Optimisation</li>
+            <li>Optimization</li>
             <li>Caching System</li>
             <li>SMTP</li>
             <li>Responsive Design</li>
@@ -232,8 +196,8 @@
           <div class="skill-icon-wrap">
             <span class="skill-icon" aria-hidden="true">◇</span>
           </div>
-          <h3 class="skill-title">Autres</h3>
-          <ul class="skill-tags">  
+          <h3 class="skill-title">Others</h3>
+          <ul class="skill-tags">
             <li>Shopify</li>
             <li>Wix</li>
             <li>Cloudflare</li>
@@ -257,17 +221,17 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION : QUELQUES CHIFFRES                                -->
+  <!-- SECTION : BY THE NUMBERS                                   -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="section stats reveal" id="stats" aria-labelledby="stats-heading">
     <div class="stats-bg" aria-hidden="true"></div>
     <div class="stats-overlay" aria-hidden="true"></div>
     <div class="container">
-      <h2 id="stats-heading" class="section-title stats-title">Quelques chiffres</h2>
+      <h2 id="stats-heading" class="section-title stats-title">By the numbers</h2>
       <div class="stats-grid">
         <div class="stat-card reveal reveal-delay-1">
           <span class="stat-number" data-target="50" data-suffix="+">0</span>
-          <span class="stat-label">Applications créées</span>
+          <span class="stat-label">Sites built</span>
         </div>
         <div class="stat-card reveal reveal-delay-2">
           <span class="stat-number" data-target="100" data-suffix="%">0</span>
@@ -275,14 +239,14 @@
         </div>
         <div class="stat-card reveal reveal-delay-3">
           <span class="stat-number" data-target="99" data-suffix="+">0</span>
-          <span class="stat-label">Nuits blanches</span>
+          <span class="stat-label">Sleepless nights</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 4 : 3 PROJETS DÉTAILLÉS (aperçu, nom, rôle, desc, bouton) -->
+  <!-- SECTION 4 : FEATURED PROJECTS                              -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="section featured-projects reveal" id="featured-projects" aria-labelledby="featured-heading">
     <div class="section-shapes" aria-hidden="true">
@@ -290,56 +254,49 @@
       <div class="shape shape-section shape-f-2"></div>
     </div>
     <div class="container">
-      <h2 id="featured-heading" class="section-title">Projets récents</h2>
+      <h2 id="featured-heading" class="section-title">Recent projects</h2>
       <div class="featured-grid">
-        <!-- Projet 1 — image Unsplash placeholder (à remplacer par une vraie capture d'écran du projet) -->
         <article class="featured-card reveal reveal-delay-1">
           <div class="featured-image-wrap">
-            <!-- loading="lazy" : chargement différé pour améliorer les performances (LCP) -->
             <img src="assets/projects/zen.png" alt="" class="featured-image" loading="lazy">
           </div>
           <div class="featured-body">
-            <h3 class="featured-name">Site eCommerce & Bookings</h3>
+            <h3 class="featured-name">eCommerce & Bookings Website</h3>
             <p class="featured-role">WordPress, Amelia, WooCommerce, Woo Gift Cards</p>
             <p class="featured-desc">
-              Design et deploiement d'un site eCommerce avec gestion avancée des réservations. 
-              Configuration et design du catalogue produits, des paiements, des cartes cadeaux et du tunnel d'achat. 
-              Optimisation de l'expérience utilisateur afin d'offrir une plateforme performante, intuitive et orientée conversion.
+              Design and deployment of an eCommerce site with advanced booking management.
+              Configuration and design of the product catalog, payments, gift cards and checkout funnel.
+              User experience optimization to deliver a high-performance, intuitive, conversion-focused platform.
             </p>
-            <!-- href="#" à remplacer par l'URL réelle du projet -->
-            <a href="https://www.excellence-zen.be/" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+            <a href="https://www.excellence-zen.be/" class="btn-outline" target="_blank" rel="noopener">View site</a>
           </div>
         </article>
-        <!-- Projet 2 -->
         <article class="featured-card reveal reveal-delay-2">
           <div class="featured-image-wrap">
             <img src="assets/projects/nf-company.png" alt="" class="featured-image" loading="lazy">
           </div>
           <div class="featured-body">
-            <h3 class="featured-name">Site vitrine minimaliste</h3>
-            <p class="featured-role">WordPress, JupiterX, Elementor, WP SMTP</p> 
+            <h3 class="featured-name">Minimalist showcase website</h3>
+            <p class="featured-role">WordPress, JupiterX, Elementor, WP SMTP</p>
             <p class="featured-desc">
-              Accompagnement de A à Z du client dans la con crétisation de sa vision : de l’achat du nom de domaine au déploiement serveur, 
-              jusqu’à l’intégration et la mise en ligne.
-              Création d’un design sobre, minimaliste et impactant, permettant à la marque de se démarquer clairement.  
+              End-to-end client support from domain purchase to server deployment and go-live.
+              Built a clean, minimalist and impactful design that lets the brand stand out clearly.
             </p>
-            <a href="https://nfcompany.ca/" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+            <a href="https://nfcompany.ca/" class="btn-outline" target="_blank" rel="noopener">View site</a>
           </div>
         </article>
-        <!-- Projet 3 -->
         <article class="featured-card reveal reveal-delay-3">
           <div class="featured-image-wrap">
             <img src="assets/projects/contesvivants.png" alt="" class="featured-image" loading="lazy">
           </div>
           <div class="featured-body">
-            <h3 class="featured-name">Site vitrine événementiel</h3>
+            <h3 class="featured-name">Event showcase website</h3>
             <p class="featured-role">WordPress, EventON, Elementor, Google Site Kit</p>
             <p class="featured-desc">
-              Participation à la réalisation d’un site au design distinctif, aligné sur un branding précis et narratif.
-              Mise en place des principales fonctionnalités, configuration du tracking via Google Analytics et formation 
-              des utilisateurs afin d’assurer leur autonomie.
+              Contributed to building a distinctive site aligned with a precise narrative branding.
+              Set up core features, configured Google Analytics tracking and trained users to ensure autonomy.
             </p>
-            <a href="https://contes-vivants.ca/" class="btn-outline" target="_blank" rel="noopener">Voir le site</a>
+            <a href="https://contes-vivants.ca/" class="btn-outline" target="_blank" rel="noopener">View site</a>
           </div>
         </article>
       </div>
@@ -347,128 +304,113 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 5 : AUTRES PROJETS (liste: image, tech, rôle, bouton) -->
+  <!-- SECTION 5 : OTHER PROJECTS                                 -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- Pas de classe reveal sur la section elle-même, les cards sont animées individuellement -->
   <section class="section other-projects reveal" id="other-projects" aria-labelledby="other-heading">
     <div class="section-shapes" aria-hidden="true">
       <div class="shape shape-section shape-o-1"></div>
       <div class="shape shape-section shape-o-2"></div>
     </div>
     <div class="container">
-      <h2 id="other-heading" class="section-title">Autres projets</h2>
-      <!-- other-grid : grille plus compacte que featured-grid, pour afficher plus de projets d'un coup -->
+      <h2 id="other-heading" class="section-title">Other projects</h2>
       <div class="other-grid">
-        <!-- Projet WordPress 1 — stack Elementor/JupiterX/WooCommerce -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/astucien1.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">WordPress, Elementor, JupiterX, WooCommerce</p>
-          <p class="other-role">Migration du site, refonte complète et redesign du site, rédaction SEO</p>
-          <a href="https://astucienteam.com/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">Site migration, full redesign, SEO copywriting</p>
+          <a href="https://astucienteam.com/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
-        <!-- Projet WordPress 2 — multilingue avec Polylang -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/avestan1.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">WordPress, Divi, ACF, Polylang</p>
-          <p class="other-role">Refonte du site, design et intégration, formation utilisateurs</p>
-          <a href="https://avestanacademy.com/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">Site redesign, design & integration, user training</p>
+          <a href="https://avestanacademy.com/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
-        <!-- Projet WordPress 3 — gestion d'événements avec EventON -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/cmcm1.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">WordPress, Elementor, WooCommerce, EventON</p>
-          <p class="other-role">Intégration des pages, configuration des plugins, formation utilisateurs</p>
-          <a href="https://cmcm.qc.ca/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">Page integration, plugin configuration, user training</p>
+          <a href="https://cmcm.qc.ca/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
-        <!-- Projet WordPress 4 — réservations avec Amelia -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/uncoveredshorts.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">Laravel, JavaScript, LAMP Stack, Google Sheet API, Git, Cloudflare</p>
-          <p class="other-role">Design UI/UX, développement full stack, deploiement et maintenance, CI/CD</p>
-          <a href="https://uncoveredshorts.com/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">UI/UX design, full stack development, deployment & maintenance, CI/CD</p>
+          <a href="https://uncoveredshorts.com/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
-        <!-- Projet WordPress 5 — réservations avec Amelia -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/dupont.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">WordPress, WP Bakery, WooCommerce, CSS</p>
-          <p class="other-role">Intégration des pages, personnalisation du design</p>
-          <a href="https://dupontjcosmetique.com/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">Page integration, design customization</p>
+          <a href="https://dupontjcosmetique.com/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
-        <!-- Projet WordPress 6 — réservations avec Amelia -->
         <article class="other-card">
           <div class="other-image-wrap">
             <img src="assets/projects/ejdcd1.png" alt="" class="other-image" loading="lazy">
           </div>
           <p class="other-tech">WordPress, Elementor, Polylang, LocoTranslate</p>
-          <p class="other-role">Intégration des pages, configuration des plugins, formation utilisateurs</p>
-          <a href="https://emmanueljouthe.com/" class="btn-small" target="_blank" rel="noopener">Voir le site</a>
+          <p class="other-role">Page integration, plugin configuration, user training</p>
+          <a href="https://emmanueljouthe.com/" class="btn-small" target="_blank" rel="noopener">View site</a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 2 : TÉMOIGNAGES                                    -->
+  <!-- SECTION : TESTIMONIALS                                     -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- reveal : classe détectée par l'IntersectionObserver dans script.js
-       pour déclencher l'animation d'apparition au scroll -->
-       <section class="section testimonials reveal" id="testimonials" aria-labelledby="testimonials-heading">
-        <div class="section-shapes" aria-hidden="true">
-          <div class="shape shape-section shape-t-1"></div>
-          <div class="shape shape-section shape-t-2"></div>
-        </div>
-        <div class="container">
-          <h2 id="testimonials-heading" class="section-title">Témoignages</h2>
-          <!-- reveal-delay-* : classes CSS qui ajoutent un délai progressif à l'animation (stagger) -->
-          <div class="testimonials-grid">
-            <blockquote class="testimonial-card reveal reveal-delay-1">
-              <p>Tonny a été incroyable avec qui travailler. Il a respecté les délais et a fourni d’excellents retours.
-                Il avait même des compétences auxquelles je ne m'attendais pas.
-                Je recommanderais Tonny à toute personne ayant besoin d'un développeur web compétent !</p>
-                <br>
-                <b>Tucker Dona - Head of Business Development</b>
-            </blockquote>
-            <blockquote class="testimonial-card reveal reveal-delay-2">
-              <p>Tonny est un développeur rapide et très attentif aux détails avec qui j’adore travailler. 
-                Il comprend tout de suite. La communication et l’exécution sont impeccables,
-                et son travail est excellent. J’ai hâte de continuer à concrétiser des idées avec Tonny !</p>
-                <br>
-                <b>Joel Fischer - UX Director</b>     
-            </blockquote>
-          </div>
-        </div>
-      </section>
+  <section class="section testimonials reveal" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="section-shapes" aria-hidden="true">
+      <div class="shape shape-section shape-t-1"></div>
+      <div class="shape shape-section shape-t-2"></div>
+    </div>
+    <div class="container">
+      <h2 id="testimonials-heading" class="section-title">Testimonials</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card reveal reveal-delay-1">
+          <p>Tonny was incredible to work with. He met every deadline and delivered excellent feedback.
+            He even had skills I didn't expect.
+            I would recommend Tonny to anyone looking for a skilled web developer!</p>
+            <br>
+            <b>Tucker Dona - Head of Business Development</b>
+        </blockquote>
+        <blockquote class="testimonial-card reveal reveal-delay-2">
+          <p>Tonny is a fast developer and very detail-oriented — I love working with him.
+            He gets it right away. Communication and execution are impeccable,
+            and his work is excellent. I look forward to continuing to bring ideas to life with Tonny!</p>
+            <br>
+            <b>Joel Fischer - UX Director</b>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION : TROUVEZ MOI SUR                                  -->
+  <!-- SECTION : FIND ME ON                                       -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <section class="section platforms reveal" id="platforms" aria-labelledby="platforms-heading">
     <div class="container">
-      <h2 id="platforms-heading" class="section-title">Trouvez moi sur</h2>
+      <h2 id="platforms-heading" class="section-title">Find me on</h2>
       <div class="platforms-list">
-
-        <a href="https://www.upwork.com/freelancers/~01cabb928f4cbfd601" target="_blank" rel="noopener" class="platform-item" aria-label="Upwork">
+        <a href="https://www.upwork.com" target="_blank" rel="noopener" class="platform-item" aria-label="Upwork">
           <img src="assets/freelance/upwork.png" alt="Upwork logo" class="platform-brand-logo">
         </a>
-
-        <a href="https://www.fiverr.com/tonnyandria/" target="_blank" rel="noopener" class="platform-item" aria-label="Fiverr">
+        <a href="https://www.fiverr.com" target="_blank" rel="noopener" class="platform-item" aria-label="Fiverr">
           <img src="assets/freelance/fiverr.png" alt="Fiverr logo" class="platform-brand-logo">
         </a>
-
         <a href="https://www.comeup.com" target="_blank" rel="noopener" class="platform-item" aria-label="ComeUp">
           <img src="assets/freelance/comeup.png" alt="ComeUp logo" class="platform-brand-logo">
         </a>
-
         <a href="https://www.codeur.com" target="_blank" rel="noopener" class="platform-item" aria-label="Codeur">
           <img src="assets/freelance/codeur.png" alt="Codeur logo" class="platform-brand-logo">
         </a>
@@ -477,11 +419,9 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 6 : CONTACT (design original)                      -->
+  <!-- SECTION : CONTACT                                          -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- Utilise <footer> sémantiquement car c'est la dernière section de la page -->
-  <footer class="section contact reveal" aria-labelledby="contact-heading">
-    <!-- contact-bg : fond décoratif distinct du fond général de la page -->
+  <footer class="section contact reveal" id="contact" aria-labelledby="contact-heading">
     <div class="contact-bg"></div>
     <div class="section-shapes contact-shapes" aria-hidden="true">
       <div class="shape shape-section shape-c-1"></div>
@@ -489,26 +429,24 @@
       <div class="shape shape-section shape-c-3"></div>
     </div>
     <div class="container">
-      <h2 id="contact-heading" class="section-title contact-title">Restons en contact</h2>
-      <p class="contact-intro">Intéressé par mes services ou besoin d'infos ? Écrivez-moi.</p>
+      <h2 id="contact-heading" class="section-title contact-title">Let's stay in touch</h2>
+      <p class="contact-intro">Interested in my services or need more info? Reach out.</p>
 
-      <!-- Icônes sociales reprises du hero, mais en taille 28px pour la zone de contact -->
-      <div class="contact-socials" aria-label="Réseaux sociaux">
-        <a href="https://ca.linkedin.com/in/tonny-444n" target="_blank" rel="noopener" class="contact-social-icon" title="LinkedIn" aria-label="LinkedIn">
+      <div class="contact-socials" aria-label="Social networks">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-social-icon" title="LinkedIn" aria-label="LinkedIn">
           <svg width="28" height="28" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
         <a href="mailto:tonny.freelancing@gmail.com" class="contact-social-icon" title="Gmail" aria-label="Email">
           <svg width="28" height="28" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.883l8.073-6.39C21.69 2.28 24 3.434 24 5.457z"/></svg>
         </a>
-        <a href="https://wa.me/14387226839" target="_blank" rel="noopener" class="contact-social-icon" title="WhatsApp" aria-label="WhatsApp">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="contact-social-icon" title="WhatsApp" aria-label="WhatsApp">
           <svg width="28" height="28" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
-        <a href="https://github.com/444Tonny" target="_blank" rel="noopener" class="contact-social-icon" title="GitHub" aria-label="GitHub">
+        <a href="https://github.com" target="_blank" rel="noopener" class="contact-social-icon" title="GitHub" aria-label="GitHub">
           <svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
       </div>
 
-      <!-- Liens de contact textuels avec icône décorative (@ pour email, ↑ pour Upwork) -->
       <div class="contact-links">
         <a href="mailto:tonny.freelancing@gmail.com" class="contact-link contact-email">
           <span class="contact-link-icon" aria-hidden="true">✉</span>
@@ -516,14 +454,13 @@
         </a>
       </div>
 
-      <!-- Lien vers le portfolio jeux séparé — href="#" à remplacer par l'URL réelle 
-      <p class="contact-more">Envie d'en voir plus ? Découvrez mon <a href="#" target="_blank" rel="noopener">portfolio jeux</a>.</p>
-      -->
-      <p class="contact-credits">Merci de votre visite :)</p>
+      <p class="contact-credits">Thanks for stopping by :)</p>
     </div>
   </footer>
 
-  <!-- Script chargé en fin de body pour ne pas bloquer le rendu HTML -->
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>

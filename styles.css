@@ -2513,6 +2513,24 @@ h3.skill-title
   border-color: var(--accent);
 }
 
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .platforms-list {
+    gap: 0.75rem;
+  }
+  .platform-item {
+    padding: 1rem 1.25rem;
+  }
+  .platform-brand-logo {
+    height: 35px;
+  }
+  .contact
+  {
+    padding: 3.5rem 0 12rem 0;
+  }
+}
+
+
 /* ── IMAGE HERO PAR THÈME ───────────────────────────────────── */
 /* Classic : photo normale (défaut) */
 [data-theme="classic"] .hero-photo {
@@ -2542,20 +2560,90 @@ h3.skill-title
   content: url('assets/tonny_organic.png');
 }
 
-/* ── RESPONSIVE ─────────────────────────────────────────────── */
-@media (max-width: 640px) {
-  .platforms-list {
-    gap: 0.75rem;
-  }
-  .platform-item {
-    padding: 1rem 1.25rem;
-  }
-  .platform-brand-logo {
-    height: 35px;
-  }
-  .contact
-  {
-    padding: 3.5rem 0 12rem 0;
-  }
+/* ── LANGUAGE SWITCHER ──────────────────────────────────────── */
+
+a.lang-btn {
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.lang-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.lang-btn {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.35rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted, rgba(255,255,255,0.5));
+  cursor: pointer;
+  border-radius: 3px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.lang-btn.active {
+  color: var(--accent, #FF0067);
+}
+
+.lang-divider {
+  color: var(--border);
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* Ajustements par thème */
+[data-theme="classic"] .lang-switcher {
+  background: rgba(4,29,89,0.6);
+  border-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+[data-theme="classic"] .lang-btn { color: rgba(255,255,255,0.4); }
+[data-theme="classic"] .lang-btn.active { color: #FF0067; }
+
+[data-theme="neobrutalist"] .lang-switcher {
+  border: 2px solid #000;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #000;
+  background: #fff;
+}
+[data-theme="neobrutalist"] .lang-btn { color: #aaa; }
+[data-theme="neobrutalist"] .lang-btn.active { color: var(--accent); }
+
+[data-theme="futurism"] .lang-switcher {
+  background: rgba(6,18,8,0.8);
+  border-color: var(--border);
+  backdrop-filter: blur(8px);
+}
+[data-theme="futurism"] .lang-btn.active { color: var(--accent); }
+
+[data-theme="glassmorphism"] .lang-switcher {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-color: rgba(255,255,255,0.3);
+}
+[data-theme="glassmorphism"] .lang-btn { color: rgba(255,255,255,0.5); }
+[data-theme="glassmorphism"] .lang-btn.active { color: #fff; }
+
+[data-theme="organic"] .lang-switcher {
+  background: rgba(255,255,255,0.9);
+  border-color: var(--border);
+}
+[data-theme="organic"] .lang-btn.active { color: var(--accent); }
+
 

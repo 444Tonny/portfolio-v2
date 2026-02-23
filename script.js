@@ -3,9 +3,9 @@
 
   const body = document.body;
   const themeKey = 'portfolio-theme'; // Clé utilisée pour persister le thème choisi dans localStorage
-  const THEMES = ['classic', 'neobrutalist', 'retro', 'futurism', 'maximalism', 'glassmorphism', 'organic', 'magazine'];
+  const THEMES = ['classic', 'neobrutalist', 'glassmorphism', 'organic', 'futurism', 'retro'];
   const LOADER_MIN_MS = 200;   // Durée minimale d'affichage du loader en millisecondes
-  const THEME_AUTO_MS = 400;   // Intervalle de rotation automatique des thèmes en millisecondes
+  const THEME_AUTO_MS = 3000;   // Intervalle de rotation automatique des thèmes en millisecondes
 
   // ═══════════════════════════════════════════════════════════════
   // LOADER 3D — afficher au moins 2 secondes puis transition
@@ -80,14 +80,14 @@
 
   // Initialisation : appliquer le thème stocké puis démarrer la rotation
   setTheme(getStoredTheme());
-  //startAutoRotate();
+  startAutoRotate();
 
   // Clic sur un bouton du picker : applique le thème choisi et repart la rotation depuis zéro
   document.querySelectorAll('.theme-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var theme = this.getAttribute('data-theme');
       setTheme(theme);
-      //startAutoRotate();  // Réinitialise le timer pour éviter un saut immédiat après le clic
+      clearInterval(themeInterval); // Stop définitif, pas de relance
     });
   });
 
@@ -167,3 +167,5 @@
   statNumbers.forEach(function(el) {
     statObserver.observe(el);
   });
+
+ 
