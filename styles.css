@@ -294,6 +294,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 [data-theme="retro"] .hero-tagline,
 [data-theme="retro"] .hero-badge { color: rgba(245, 230, 211, 0.9); }
 
+[data-theme="retro"] .hero-name,
+[data-theme="retro"] .hero-tagline { font-style: italic; }
+
 [data-theme="retro"] .skill-card {border: 2px dashed var(--border) !important;}
 
 [data-theme="retro"] .theme-btn.active {
@@ -334,6 +337,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 [data-theme="futurism"] .hero-name
 {
   text-shadow: 0 0 20px var(--text-glow);
+  font-size: clamp(3rem, 8vw, 4rem) !important;
 }
 /* ═══════════════════════════════════════════════════════════════════
    THEME: GLASSMORPHISM
@@ -498,6 +502,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   background: none;
   -webkit-text-fill-color: var(--text);
   color: var(--text);
+  margin: -10px 0 !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
