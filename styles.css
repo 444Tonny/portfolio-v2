@@ -1080,6 +1080,10 @@ BOUTONS
   {
     justify-content: center;
   }
+  .hero-buttons
+  {
+    justify-content: center;
+  }
 }
 
 @keyframes heroReveal {
