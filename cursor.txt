@@ -1,9 +1,0 @@
-Non il fallait enlever maximalisme et remplacer par retro. Donc remet minimalisme et suppr maximalisme. 
-Pour minimalisme, je veux que tu remettes exactement ce que tu avais mis, mais pour accentuer l'aspect minimal, utilise des font tres fines (et pttr plus grandes), et le tout avec style. 
-2. pour le style classique pourquoi l'ordre la disposition du section Hero est differente de celle des autres ? garde le meme que les autres pour le classique, et je veux que le fond soit plus beau c'est tres vide. Et aussi pour le classique, utilise des animations d'entres car c'est trop basiques. Et les formes abstraites en background devraient etre colorés degradé, rajoute-en en classique.
-3. Le neo brutaliste est bien mais il manque de couleurs, rajoute du vert qu'on utilise  beaucoup pour ce genre de design, peut etre en rajouter dans les elements de fond et/ou dans les sections/boutons
-4. Pour organic, les sections (article, blockquote) sont arrondi simple pas beau du tout, je suis sur firefox. Il faut soit un css qui marche partout sinon laisse forme basique arrondi comme avant. Au moins garder la forme actuelle des boutons c'est tres bien,
-5. Le retro a une bonne couleur,. mais a part la couleur je ne vois rien qui fait retro. ameliore ca
-6. Rajoute des commentaire ou un ficher contexte pour que tu puisse comprendre ton code dans le futur
-7. Mets les meme alignement de textes et titre. Seule la taille et boldness des polices que tu devraiet modifier
-8. Supprime le style magazine et remplace par Claymorphism et avec des couleurs pastels
