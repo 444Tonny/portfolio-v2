@@ -3,7 +3,7 @@
 
   const body = document.body;
   const themeKey = 'portfolio-theme'; // Clé utilisée pour persister le thème choisi dans localStorage
-  const THEMES = ['classic', 'neobrutalist', 'glassmorphism', 'organic','retro','futurism']
+  const THEMES = ['classic', 'neobrutalist', 'organic', 'glassmorphism','retro','futurism']
   const LOADER_MIN_MS = 500;   // Durée minimale d'affichage du loader en millisecondes
   const THEME_AUTO_MS = 3000;   // Intervalle de rotation automatique des thèmes en millisecondes
 
