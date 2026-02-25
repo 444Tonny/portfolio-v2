@@ -539,10 +539,10 @@
 
       <!-- Liens de contact textuels avec icône décorative (@ pour email, ↑ pour Upwork) -->
       <div class="contact-links">
-        <a href="mailto:tonny.freelancing@gmail.com" class="contact-link contact-email">
-          <span class="contact-link-icon" aria-hidden="true">✉</span>
+        <div class="contact-link contact-email" onclick="navigator.clipboard.writeText('tonny.freelancing@gmail.com').then(() => { const s = this.querySelector('span:last-child'); const orig = s.textContent; s.textContent = 'Copié !'; setTimeout(() => s.textContent = orig, 2000); })" style="cursor:pointer;">
+          <span class="contact-link-icon" aria-hidden="true"></span>
           <span>tonny.freelancing@gmail.com</span>
-        </a>
+        </div>
       </div>
 
       <!-- Lien vers le portfolio jeux séparé — href="#" à remplacer par l'URL réelle 

@@ -477,10 +477,10 @@
       </div>
 
       <div class="contact-links">
-        <a href="mailto:tonny.freelancing@gmail.com" class="contact-link contact-email">
+        <div class="contact-link contact-email" onclick="navigator.clipboard.writeText('tonny.freelancing@gmail.com').then(() => { const s = this.querySelector('span:last-child'); const orig = s.textContent; s.textContent = 'Copied !'; setTimeout(() => s.textContent = orig, 2000); })" style="cursor:pointer;">
           <span class="contact-link-icon" aria-hidden="true"></span>
           <span>tonny.freelancing@gmail.com</span>
-        </a>
+        </div>
       </div>
 
       <p class="contact-credits">Thanks for stopping by :)</p>
